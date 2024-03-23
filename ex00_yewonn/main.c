@@ -16,6 +16,10 @@ int	main(int argc, char **argv)
 			/*1. a. format of input */
 			/*1. b. No solutions. */
 
+	/*2. Divide the string into individual variables? SO that it can be used as input for the conditions in the output function */
+
+	/* perform check of errors*/
+
 
 /* Program output logic */
 }
