@@ -3,6 +3,7 @@
  *
  *
  * ^^^^^^^^^^^^!! */
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -15,7 +16,7 @@ int *ft_store_integer_arrays(char *str)
 	int *integer_array;
 	i = 0;
 	
-	integer_array = (int*) malloc(12 * ft_strlen_only_digits(str)); 
+	integer_array = (int*) malloc(ft_strlen_only_digits(str) * sizeof(int)); 
 	if (integer_array == NULL)
 	{
 		printf("Memory allocation failed!");
@@ -39,9 +40,11 @@ int	main(void)
 	int i = 0;
 	int *arrays = ft_store_integer_arrays(a);
 
+	printf("integer array: ");
 	while (i < ft_strlen_only_digits(a))
 	{
 		printf("%i, ", arrays[i]); 
 		i++;
 	}
+	free(arrays);
 }
