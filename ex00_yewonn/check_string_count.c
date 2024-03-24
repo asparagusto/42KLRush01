@@ -6,9 +6,10 @@
 /*   By: mbin-md- <mbin-md-@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/24 12:18:02 by mbin-md-          #+#    #+#             */
-/*   Updated: 2024/03/24 12:28:57 by yewoo            ###   ########.fr       */
+/*   Updated: 2024/03/24 14:58:12 by yewoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <unistd.h>
 
 void	check_string_count(char *str)
 {
@@ -25,7 +26,7 @@ void	check_string_count(char *str)
 	}
 
 	if (char_count >= 32)
-		write(1, "Error: String too long", 22);
+		write(1, "Error: String too long\n", 23);
 	if (char_count < 31)
-		write(1, "Error: String too short", 23);
+		write(1, "Error: String too short\n", 24);
 }	
