@@ -9,17 +9,19 @@
 
 int	ft_strlen_only_digits(char *str);
 
-int *ft_store_integer_arrays(char *str)
+int	*ft_store_integer_arrays(char *str)
 {
-	int i;
-	int j;
-	int *integer_array;
+	int	i;
+	int	j;
+	int	*integer_array;
+
 	i = 0;
-	
-	integer_array = (int*) malloc(ft_strlen_only_digits(str) * sizeof(int)); 
+	j = 0;
+	integer_array = (int *) malloc(ft_strlen_only_digits(str) * sizeof(int));
 	if (integer_array == NULL)
 	{
 		printf("Memory allocation failed!");
+		return (NULL);
 	}
 	while (str[i] != '\0')
 	{
@@ -30,9 +32,9 @@ int *ft_store_integer_arrays(char *str)
 		}
 		i++;
 	}
-	return integer_array;
+	return (integer_array);
 }
-
+/*
 int	main(void)
 {
 	char a[] = "1 3 4 2 1 4 5 1 2";
@@ -47,4 +49,4 @@ int	main(void)
 		i++;
 	}
 	free(arrays);
-}
+}*/
